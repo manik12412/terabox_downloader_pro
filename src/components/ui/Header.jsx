@@ -63,9 +63,6 @@ const Header = () => {
             <Button variant="outline" size="sm">
               Sign In
             </Button>
-            <Button variant="default" size="sm" iconName="Zap" iconPosition="left">
-              Go Premium
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -106,9 +103,6 @@ const Header = () => {
                 <div className="flex space-x-3">
                   <Button variant="outline" size="sm" fullWidth>
                     Sign In
-                  </Button>
-                  <Button variant="default" size="sm" fullWidth iconName="Zap" iconPosition="left">
-                    Go Premium
                   </Button>
                 </div>
               </div>

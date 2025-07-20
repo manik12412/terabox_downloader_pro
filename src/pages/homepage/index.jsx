@@ -5,7 +5,6 @@ import LiveActivityFeed from './components/LiveActivityFeed';
 import FeaturesSection from './components/FeaturesSection';
 import SpeedComparison from './components/SpeedComparison';
 import TestimonialsSection from './components/TestimonialsSection';
-import PricingPreview from './components/PricingPreview';
 import TrustIndicators from './components/TrustIndicators';
 import Footer from './components/Footer';
 
@@ -21,7 +20,6 @@ const Homepage = () => {
         <FeaturesSection />
         <SpeedComparison />
         <TestimonialsSection />
-        <PricingPreview />
         <TrustIndicators />
       </main>
 
