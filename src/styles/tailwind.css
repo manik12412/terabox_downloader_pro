@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #fafafa; /* gray-50 */
+    --color-foreground: #111827; /* gray-900 */
+    --color-border: #e5e7eb; /* gray-200 */
+    --color-input: #ffffff; /* white */
+    --color-ring: #2563eb; /* blue-600 */
+    
+    /* Card Colors */
+    --color-card: #ffffff; /* white */
+    --color-card-foreground: #111827; /* gray-900 */
+    
+    /* Popover Colors */
+    --color-popover: #ffffff; /* white */
+    --color-popover-foreground: #111827; /* gray-900 */
+    
+    /* Muted Colors */
+    --color-muted: #f3f4f6; /* gray-100 */
+    --color-muted-foreground: #6b7280; /* gray-500 */
+    
+    /* Primary Colors - Deep trust blue */
+    --color-primary: #1e40af; /* blue-800 */
+    --color-primary-foreground: #ffffff; /* white */
+    
+    /* Secondary Colors - Bright action blue */
+    --color-secondary: #3b82f6; /* blue-500 */
+    --color-secondary-foreground: #ffffff; /* white */
+    
+    /* Destructive Colors */
+    --color-destructive: #dc2626; /* red-600 */
+    --color-destructive-foreground: #ffffff; /* white */
+    
+    /* Accent Colors - Success green */
+    --color-accent: #10b981; /* emerald-500 */
+    --color-accent-foreground: #ffffff; /* white */
+    
+    /* Success Colors */
+    --color-success: #059669; /* emerald-600 */
+    --color-success-foreground: #ffffff; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #d97706; /* amber-600 */
+    --color-warning-foreground: #ffffff; /* white */
+    
+    /* Error Colors */
+    --color-error: #dc2626; /* red-600 */
+    --color-error-foreground: #ffffff; /* white */
+    
+    /* Brand Specific Colors */
+    --color-brand-primary: #2563eb; /* blue-600 */
+    --color-brand-secondary: #1e40af; /* blue-800 */
+    --color-trust-builder: #6366f1; /* indigo-500 */
+    --color-conversion-accent: #10b981; /* emerald-500 */
+    
+    /* Text Hierarchy */
+    --color-text-primary: #1f2937; /* gray-800 */
+    --color-text-secondary: #6b7280; /* gray-500 */
+    
+    /* Surface Colors */
+    --color-surface: #ffffff; /* white */
+    --color-surface-secondary: #f8fafc; /* slate-50 */
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+.btn-primary  {
+    @apply bg-primary text-primary-foreground transition-all duration-200 ease-in-out;
+  }
+.btn-secondary  {
+    @apply bg-secondary text-secondary-foreground transition-all duration-200 ease-in-out;
+  }
+  
+  .card-elevated {
+    @apply bg-card text-card-foreground shadow-sm border border-border rounded-lg;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .shadow-brand {
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.1), 0 2px 4px -1px rgba(37, 99, 235, 0.06);
+  }
+  
+  .border-brand {
+    @apply border-2 border-primary;
+  }
+  
+  .focus-brand {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
